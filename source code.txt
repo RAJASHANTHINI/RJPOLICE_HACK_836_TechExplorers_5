@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phishing Detection</title>
+  <script>
+    function checkURL() {
+      var trustedURLs = [
+        "https://www.trustedwebsite1.com",
+        "https://www.trustedwebsite2.com"
+        // Add more trusted URLs to this list
+      ];
+
+      var currentURL = window.location.href;
+
+      for (var i = 0; i < trustedURLs.length; i++) {
+        if (currentURL === trustedURLs[i]) {
+          alert("This website is trusted.");
+          return;
+        }
+      }
+
+      alert("This website may not be trusted.");
+    }
+  </script>
+</head>
+<body onload="checkURL()">
+  <!-- Your website content goes here -->
+</body>
+</html>
